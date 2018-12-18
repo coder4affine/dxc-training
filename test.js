@@ -39,6 +39,30 @@ const ab = [...a, ...b];
 
 console.log(ab);
 
+
+const sum = (a, b) => a + b;
+const substract = (a, b) => a - b;
+
+// const calculator = (type, a, b) => {
+//     if(type === 'sum') {
+//         return sum(a, b);
+//     }
+//     return substract(a, b);
+// }
+
+const calculator = (type) => {
+    return (a, b) => {
+            if(type === 'sum') {
+                return sum(a, b);
+            }
+            return substract(a, b);
+    }
+}
+
+console.log(calculator('sum')(2, 3))
+
+// console.log(calculator('sum', 1, 3))
+
 const x = { z: 0};
 const abx = [x, ...ab];
 console.log(abx);
